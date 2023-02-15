@@ -1,13 +1,16 @@
 package hexlet.code;
+
 import java.util.Scanner;
+
 public class Cli {
-     public static void askName() {
-         Scanner scanner = new Scanner(System.in);
+    public static void askName() {
 
-             System.out.print("May I have your name?");
-             String userName = scanner.next();
-             System.out.println("Hello, " + userName + "!");
+        Scanner scanner = new Scanner(System.in);
 
-             scanner.close();
-         }
-     }
+        System.out.print("May I have your name?");
+        String userName = scanner.next();
+        System.out.println("Hello, " + userName + "!");
+
+        scanner.close();
+    }
+}
