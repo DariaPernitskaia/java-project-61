@@ -35,7 +35,7 @@ public class Even {
 
             }
             if (correctAnswers == 3) {
-                System.out.println("Congratulation, " + Greeting.userName + "!");
+                System.out.println("Congratulations, " + Greeting.userName + "!");
             }
         }
     }
