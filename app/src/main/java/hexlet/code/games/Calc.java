@@ -19,7 +19,7 @@ public class Calc {
             int randomChar = (int) (Math.random() * chars.length);
             char operator = chars[randomChar];
             String question = "Question: " + firstRandomNumber + " " + operator + " " + secondRandomNumber;
-            int answer = 0;
+            int answer;
 
             switch (operator) {
                 case '-':
