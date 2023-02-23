@@ -8,6 +8,8 @@ import hexlet.code.games.Calc;
 
 import hexlet.code.games.GCD;
 
+import hexlet.code.games.Progression;
+
 public class App {
 
 
@@ -19,6 +21,7 @@ public class App {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         String gameNumber = scanner.next();
@@ -37,6 +40,9 @@ public class App {
         }
         if (gameNumber.equals("4")) {
             GCD.commonDivisor();
+        }
+        if (gameNumber.equals("5")) {
+            Progression.arithmeticProgression();
         }
         scanner.close();
 
