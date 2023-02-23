@@ -26,7 +26,7 @@ public class GCD {
                     answer = j;
                     break;
                 } else {
-                    answer = 0;
+                    answer = 1;
                 }
             }
             questionsAndAnswers[i][0] = question;
