@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 public class Prime {
 
-    public static String gameRules = "Answer 'yes' if given number is prime. Otherwise answer 'no'";
+    public static String gameRules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static int max = 1000;
     public static void primeNumber() {
         Engine.welcome();
