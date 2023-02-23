@@ -19,14 +19,14 @@ public class GCD {
             int secondRandomNumber = (int) (Math.random() * max);
 
             String question = "Question: " + firstRandomNumber + " " + secondRandomNumber;
-            int answer = 0;
+            int answer = 1;
             int j;
             for (j = firstRandomNumber > secondRandomNumber ? secondRandomNumber : firstRandomNumber; j > 1; j--) {
                 if (firstRandomNumber % j == 0 && secondRandomNumber % j == 0) {
                     answer = j;
-
+                    break;
                 } else {
-                    answer = 1;
+                    answer = 0;
                 }
             }
             questionsAndAnswers[i][0] = question;
