@@ -21,13 +21,14 @@ public class GCD {
             String question = "Question: " + firstRandomNumber + " " + secondRandomNumber;
             int answer = 1;
             int j;
-            for (j = firstRandomNumber > secondRandomNumber ? secondRandomNumber : firstRandomNumber; j > 1; j--) {
+            for (j = Math.min(firstRandomNumber, secondRandomNumber); j > 1; j--) {
                 if (firstRandomNumber % j == 0 && secondRandomNumber % j == 0) {
                     answer = j;
                     break;
-                } else {
-                    answer = 1;
                 }
+            }
+            if (firstRandomNumber == 0 || secondRandomNumber == 0) {
+                answer = Math.max(firstRandomNumber, secondRandomNumber);
             }
             questionsAndAnswers[i][0] = question;
             questionsAndAnswers[i][1] = Integer.toString(answer);
