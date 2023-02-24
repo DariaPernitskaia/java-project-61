@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Engine {
 
-    public static String userName = "";
     public static final int ROUNDS = 3;
+    private static String userName = "";
 
     public static void welcome() {
 
