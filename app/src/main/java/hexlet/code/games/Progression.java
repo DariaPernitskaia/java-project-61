@@ -13,8 +13,6 @@ public class Progression {
 
     public static void arithmeticProgression() {
 
-        Engine.welcome();
-
         String[][] questionsAndAnswers = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < questionsAndAnswers.length; i++) {

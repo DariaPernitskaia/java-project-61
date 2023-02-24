@@ -3,11 +3,9 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
-
     public static final String GAMERULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static final int MAX = 1000;
     public static void primeNumber() {
-        Engine.welcome();
 
         String[][] questionsAndAnswers = new String[Engine.ROUNDS][2];
 

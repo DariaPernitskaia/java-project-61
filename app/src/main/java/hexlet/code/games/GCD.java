@@ -8,8 +8,6 @@ public class GCD {
     public static final String GAMERULES = "Find the greatest common divisor of given numbers.";
     public static void commonDivisor() {
 
-        Engine.welcome();
-
         String[][] questionsAndAnswers = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < questionsAndAnswers.length; i++) {

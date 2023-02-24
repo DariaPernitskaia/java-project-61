@@ -7,8 +7,6 @@ public class Even {
 
     public static void parityCheck() {
 
-        Engine.welcome();
-
         String[][] questionsAndAnswers = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < questionsAndAnswers.length; i++) {

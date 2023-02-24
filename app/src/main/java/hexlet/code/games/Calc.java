@@ -6,8 +6,6 @@ public class Calc {
     public static final String GAMERULES = "What is the result of the expression?";
     public static void calculating() {
 
-        Engine.welcome();
-
         String[][] questionsAndAnswers = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < questionsAndAnswers.length; i++) {
