@@ -6,11 +6,10 @@ import java.util.Arrays;
 
 public class Progression {
 
-    public static int max = 100;
-    public static int maxStep = 10;
-    public static int length = 10;
-
-    public static String gameRules = "What number is missing in the progression?";
+    public static final int MAX = 100;
+    public static final int MAXSTEP = 10;
+    public static final int LENGTH = 10;
+    public static final String GAMERULES = "What number is missing in the progression?";
 
     public static void arithmeticProgression() {
 
@@ -21,16 +20,16 @@ public class Progression {
         for (var i = 0; i < questionsAndAnswers.length; i++) {
 
 
-            int firstRandomNumber = (int) (Math.random() * max);
-            int step = (int) (Math.random() * maxStep);
-            int hiddenIndex = (int) (Math.random() * maxStep);
+            int firstRandomNumber = (int) (Math.random() * MAX);
+            int step = (int) (Math.random() * MAXSTEP);
+            int hiddenIndex = (int) (Math.random() * MAXSTEP);
 
-            int[] numbers = new int[length];
-            for (var j = 0; j < length; j++) {
+            int[] numbers = new int[LENGTH];
+            for (var j = 0; j < LENGTH; j++) {
                 numbers[j] = firstRandomNumber + j * step;
             }
-            String[] hiddenNumbers = new String[length];
-            for (var j = 0; j < length; j++) {
+            String[] hiddenNumbers = new String[LENGTH];
+            for (var j = 0; j < LENGTH; j++) {
                 if (j == hiddenIndex) {
                     hiddenNumbers[j] = "..";
                 } else {
@@ -47,7 +46,7 @@ public class Progression {
             questionsAndAnswers[i][0] = question;
             questionsAndAnswers[i][1] = answer;
         }
-        Engine.game(gameRules, questionsAndAnswers);
+        Engine.game(GAMERULES, questionsAndAnswers);
     }
 }
 

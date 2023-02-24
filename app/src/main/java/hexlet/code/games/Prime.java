@@ -4,8 +4,8 @@ import hexlet.code.Engine;
 
 public class Prime {
 
-    public static String gameRules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    public static int max = 1000;
+    public static final String GAMERULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    public static final int MAX = 1000;
     public static void primeNumber() {
         Engine.welcome();
 
@@ -13,8 +13,7 @@ public class Prime {
 
         for (var i = 0; i < questionsAndAnswers.length; i++) {
 
-
-            int firstRandomNumber = (int) (Math.random() * max);
+            int firstRandomNumber = (int) (Math.random() * MAX);
 
             String question = "Question: " + firstRandomNumber;
             String answer;
@@ -32,6 +31,6 @@ public class Prime {
             questionsAndAnswers[i][0] = question;
             questionsAndAnswers[i][1] = answer;
         }
-        Engine.game(gameRules, questionsAndAnswers);
+        Engine.game(GAMERULES, questionsAndAnswers);
     }
 }

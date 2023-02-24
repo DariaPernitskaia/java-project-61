@@ -2,9 +2,8 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 public class Calc {
-    public static int max = 100;
-
-    public static String gameRules = "What is the result of the expression?";
+    public static final int MAX = 100;
+    public static final String GAMERULES = "What is the result of the expression?";
     public static void calculating() {
 
         Engine.welcome();
@@ -12,8 +11,8 @@ public class Calc {
         String[][] questionsAndAnswers = new String[3][2];
 
         for (var i = 0; i < questionsAndAnswers.length; i++) {
-            int firstRandomNumber = (int) (Math.random() * max);
-            int secondRandomNumber = (int) (Math.random() * max);
+            int firstRandomNumber = (int) (Math.random() * MAX);
+            int secondRandomNumber = (int) (Math.random() * MAX);
 
             char[] chars = {'-', '+', '*'};
             int randomChar = (int) (Math.random() * chars.length);
@@ -35,6 +34,6 @@ public class Calc {
             questionsAndAnswers[i][0] = question;
             questionsAndAnswers[i][1] = Integer.toString(answer);
         }
-        Engine.game(gameRules, questionsAndAnswers);
+        Engine.game(GAMERULES, questionsAndAnswers);
     }
 }

@@ -4,10 +4,8 @@ import hexlet.code.Engine;
 
 public class GCD {
 
-    public static int max = 100;
-
-    public static String gameRules = "Find the greatest common divisor of given numbers.";
-
+    public static final int MAX = 100;
+    public static final String GAMERULES = "Find the greatest common divisor of given numbers.";
     public static void commonDivisor() {
 
         Engine.welcome();
@@ -15,8 +13,8 @@ public class GCD {
         String[][] questionsAndAnswers = new String[3][2];
 
         for (var i = 0; i < questionsAndAnswers.length; i++) {
-            int firstRandomNumber = (int) (Math.random() * max);
-            int secondRandomNumber = (int) (Math.random() * max);
+            int firstRandomNumber = (int) (Math.random() * MAX);
+            int secondRandomNumber = (int) (Math.random() * MAX);
 
             String question = "Question: " + firstRandomNumber + " " + secondRandomNumber;
             int answer = 1;
@@ -33,7 +31,7 @@ public class GCD {
             questionsAndAnswers[i][0] = question;
             questionsAndAnswers[i][1] = Integer.toString(answer);
         }
-        Engine.game(gameRules, questionsAndAnswers);
+        Engine.game(GAMERULES, questionsAndAnswers);
     }
 }
 
