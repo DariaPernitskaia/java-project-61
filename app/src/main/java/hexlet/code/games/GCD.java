@@ -10,7 +10,7 @@ public class GCD {
 
         Engine.welcome();
 
-        String[][] questionsAndAnswers = new String[3][2];
+        String[][] questionsAndAnswers = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < questionsAndAnswers.length; i++) {
             int firstRandomNumber = (int) (Math.random() * MAX);

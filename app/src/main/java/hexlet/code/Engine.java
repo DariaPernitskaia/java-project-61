@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Engine {
 
     public static String userName = "";
+    public static final int ROUNDS = 3;
 
     public static void welcome() {
 
@@ -24,7 +25,7 @@ public class Engine {
         var correctAnswers = 0;
         char ch = '\'';
         var i = 0;
-        while (correctAnswers < 3) {
+        while (correctAnswers < ROUNDS) {
             String question = questionsAndAnswers[i][0];
             System.out.println(question);
             System.out.print("Your answer: ");
@@ -39,7 +40,7 @@ public class Engine {
                 System.out.println("Let's try again, " + userName + "!");
                 break;
             }
-            if (correctAnswers == 3) {
+            if (correctAnswers == ROUNDS) {
                 System.out.println("Congratulations, " + userName + "!");
             }
         }
