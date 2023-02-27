@@ -31,8 +31,7 @@ public class Progression {
                 }
             }
             String question = "Question: " + Arrays.toString(hiddenNumbers)
-                    .replace("[", "")
-                    .replace("]", "")
+                    .replace("[", "").replace("]", "")
                     .replace(",", "");
             String answer = Integer.toString(numbers[hiddenIndex]);
 

@@ -12,8 +12,7 @@ public class App {
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.print("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n");
-        System.out.println("5 - Progression\n6 - Prime\n0 - Exit");
-        System.out.print("Your choice: ");
+        System.out.print("5 - Progression\n6 - Prime\n0 - Exit\nYour choice: ");
         String gameNumber = scanner.next();
 
         if (gameNumber.equals("1")) {

@@ -7,16 +7,14 @@ public class Engine {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Welcome to the Brain Games!\nMay I have your name? ");
         String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
-        System.out.println(gameRules);
+        System.out.println("Hello, " + userName + "!" + "\n" + gameRules);
 
         var correctAnswers = 0;
         char ch = '\'';
         var i = 0;
         while (correctAnswers < ROUNDS) {
             String question = questionsAndAnswers[i][0];
-            System.out.println(question);
-            System.out.print("Your answer: ");
+            System.out.print(question + "\n" + "Your answer: ");
             String answer = scanner.next().toLowerCase();
             if (answer.equals(questionsAndAnswers[i][1])) {
                 System.out.println("Correct!");
