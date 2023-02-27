@@ -1,11 +1,8 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import java.util.Arrays;
-
 public class Progression {
-
     public static final int MAX = 100;
     public static final int MAXSTEP = 10;
     public static final int LENGTH = 10;
@@ -16,7 +13,6 @@ public class Progression {
         String[][] questionsAndAnswers = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < questionsAndAnswers.length; i++) {
-
 
             int firstRandomNumber = (int) (Math.random() * MAX);
             int step = (int) (Math.random() * MAXSTEP);
@@ -34,7 +30,6 @@ public class Progression {
                     hiddenNumbers[j] = Integer.toString(numbers[j]);
                 }
             }
-
             String question = "Question: " + Arrays.toString(hiddenNumbers)
                     .replace("[", "")
                     .replace("]", "")

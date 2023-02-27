@@ -6,9 +6,7 @@ import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
-
 public class App {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
