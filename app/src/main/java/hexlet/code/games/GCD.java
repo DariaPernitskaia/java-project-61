@@ -14,6 +14,7 @@ public class GCD {
             int secondRandomNumber = (int) (Math.random() * MAX);
 
             String question = "Question: " + firstRandomNumber + " " + secondRandomNumber;
+            //единица будет всегда НОД в случае, если отстутсвует другой НОД
             int answer = 1;
             int j;
             for (j = Math.min(firstRandomNumber, secondRandomNumber); j > 1; j--) {
