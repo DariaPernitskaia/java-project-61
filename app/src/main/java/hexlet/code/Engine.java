@@ -24,11 +24,9 @@ public class Engine {
                 System.out.print(ch + answer + ch + " is wrong answer ;(. ");
                 System.out.println("Correct answer was " + ch + questionsAndAnswers[i][1] + ch + ".");
                 System.out.println("Let's try again, " + userName + "!");
-                break;
+                return;
             }
-            if (correctAnswers == ROUNDS) {
-                System.out.println("Congratulations, " + userName + "!");
-            }
+            System.out.println("Congratulations, " + userName + "!");
         }
     }
 }
