@@ -1,6 +1,6 @@
 package hexlet.code;
 
-public class Generate {
+public class Utils {
     public static final int MAX = 100;
     public static int[] randomNumbers() {
         int[] randomNumbers = new int[2];

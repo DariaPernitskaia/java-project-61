@@ -1,5 +1,5 @@
 package hexlet.code.games;
-import hexlet.code.Generate;
+import hexlet.code.Utils;
 import hexlet.code.Engine;
 
 public class GCD {
@@ -23,16 +23,16 @@ public class GCD {
         String[][] questionsAndAnswers = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < questionsAndAnswers.length; i++) {
-            int[] randomNumbers = Generate.randomNumbers();
+            int[] randomNumbers = Utils.randomNumbers();
             int firstRandomNumber = randomNumbers[0];
             int secondRandomNumber = randomNumbers[1];
 
-            String question = "Question: " + firstRandomNumber + " " + secondRandomNumber;
+            String question = firstRandomNumber + " " + secondRandomNumber;
             int answer = commonDivisorCalculation(firstRandomNumber, secondRandomNumber);
             questionsAndAnswers[i][0] = question;
             questionsAndAnswers[i][1] = Integer.toString(answer);
         }
-        Engine.game(GAMERULES, questionsAndAnswers);
+        Engine.game(GAMERULES, questionsAndAnswers, "Question: ");
     }
 }
 
