@@ -2,10 +2,10 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import hexlet.code.Utils;
-
 import java.util.Arrays;
 public class Progression {
     public static final int MAXSTEP = 10;
+    public static final int LENGTH = 10;
     public static final String GAMERULES = "What number is missing in the progression?";
     private static int[] arithmeticProgressionCalculation(int firstRandomNumber, int step, int length) {
         int[] numbers = new int[length];
@@ -16,7 +16,6 @@ public class Progression {
     }
     public static void arithmeticProgression() {
 
-        int length = 10;
         String[][] questionsAndAnswers = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < questionsAndAnswers.length; i++) {
@@ -25,10 +24,11 @@ public class Progression {
             int firstRandomNumber = randomNumbers[0];
             int step = (int) (Math.random() * MAXSTEP);
             int hiddenIndex = (int) (Math.random() * MAXSTEP);
-            int[] numbers = arithmeticProgressionCalculation(firstRandomNumber, step, length);
 
-            String[] hiddenNumbers = new String[length];
-            for (var j = 0; j < length; j++) {
+            int[] numbers = arithmeticProgressionCalculation(firstRandomNumber, step, LENGTH);
+
+            String[] hiddenNumbers = new String[LENGTH];
+            for (var j = 0; j < LENGTH; j++) {
                 if (j == hiddenIndex) {
                     hiddenNumbers[j] = "..";
                 } else {
