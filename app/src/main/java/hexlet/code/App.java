@@ -1,11 +1,11 @@
 package hexlet.code;
-
 import java.util.Scanner;
-import hexlet.code.games.Calc;
+import hexlet.code.games.Calculation;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
+
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -26,19 +26,19 @@ public class App {
             Cli.askName();
         }
         if (gameNumber.equals("2")) {
-            Even.parityCheck();
+            Even.playParityNumberGame();
         }
         if (gameNumber.equals("3")) {
-            Calc.calculate();
+            Calculation.playCalcGame();
         }
         if (gameNumber.equals("4")) {
-            GCD.commonDivisor();
+            GCD.playCommonDivisorGame();
         }
         if (gameNumber.equals("5")) {
-            Progression.arithmeticProgression();
+            Progression.playProgressionGame();
         }
         if (gameNumber.equals("6")) {
-            Prime.primeNumber();
+            Prime.playPrimeNumberGame();
         }
         scanner.close();
     }

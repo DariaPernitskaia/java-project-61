@@ -1,50 +1,48 @@
 package hexlet.code.games;
-
 import hexlet.code.Engine;
 import hexlet.code.Utils;
-import java.util.Arrays;
+
 public class Progression {
-    public static final int MAXSTEP = 10;
-    public static final int LENGTH = 10;
-    public static final String GAMERULES = "What number is missing in the progression?";
-    private static int[] arithmeticProgressionCalculation(int firstRandomNumber, int step, int length) {
-        int[] numbers = new int[length];
+    private static final String GAMERULES = "What number is missing in the progression?";
+    private static final int MAXSTEP = 10;
+    private static final int LENGTH = 10;
+    private static final int MAX = 100;
+    private static final int MIN = 1;
+    private static String[] makeProgression(int firstRandomNumber, int step, int length) {
+        String[] numbers = new String[length];
         for (var j = 0; j < length; j++) {
-            numbers[j] = firstRandomNumber + j * step;
+            numbers[j] = Integer.toString(firstRandomNumber + j * step);
         }
         return numbers;
     }
-    public static void arithmeticProgression() {
+    public static void playProgressionGame() {
 
         String[][] questionsAndAnswers = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < questionsAndAnswers.length; i++) {
 
-            int[] randomNumbers = Utils.randomNumbers();
-            int firstRandomNumber = randomNumbers[0];
+            int firstRandomNumber = Utils.generateNumber(MIN, MAX);
             int step = (int) (Math.random() * MAXSTEP);
             int hiddenIndex = (int) (Math.random() * MAXSTEP);
 
-            int[] numbers = arithmeticProgressionCalculation(firstRandomNumber, step, LENGTH);
+            String[] numbers = makeProgression(firstRandomNumber, step, LENGTH);
 
             String[] hiddenNumbers = new String[LENGTH];
             for (var j = 0; j < LENGTH; j++) {
                 if (j == hiddenIndex) {
                     hiddenNumbers[j] = "..";
                 } else {
-                    hiddenNumbers[j] = Integer.toString(numbers[j]);
+                    hiddenNumbers[j] = numbers[j];
                 }
             }
 
-            String question = Arrays.toString(hiddenNumbers)
-                    .replace("[", "").replace("]", "")
-                    .replace(",", "");
-            String answer = Integer.toString(numbers[hiddenIndex]);
+            String question = String.join(" ", hiddenNumbers);
+            String answer = numbers[hiddenIndex];
 
             questionsAndAnswers[i][0] = question;
             questionsAndAnswers[i][1] = answer;
         }
-        Engine.game(GAMERULES, questionsAndAnswers, "Question: ");
+        Engine.makeGame(GAMERULES, questionsAndAnswers);
     }
 }
 
