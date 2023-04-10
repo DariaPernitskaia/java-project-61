@@ -24,7 +24,7 @@ public class Engine {
                 System.out.println("Let's try again, " + userName + "!");
                 return;
             }
-            if (correctAnswers == 3) {
+            if (correctAnswers == ROUNDS) {
                 System.out.println("Congratulations, " + userName + "!");
             }
         }
