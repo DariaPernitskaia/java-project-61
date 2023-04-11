@@ -21,24 +21,28 @@ public class App {
         System.out.print("Your choice: ");
         String gameNumber = scanner.next();
 
-        if (gameNumber.equals("1")) {
-            System.out.println("Welcome to the Brain Games!");
-            Cli.askName();
-        }
-        if (gameNumber.equals("2")) {
-            Even.playParityNumberGame();
-        }
-        if (gameNumber.equals("3")) {
-            Calculation.playCalcGame();
-        }
-        if (gameNumber.equals("4")) {
-            GCD.playCommonDivisorGame();
-        }
-        if (gameNumber.equals("5")) {
-            Progression.playProgressionGame();
-        }
-        if (gameNumber.equals("6")) {
-            Prime.playPrimeNumberGame();
+        switch (gameNumber) {
+            case "1":
+                System.out.println("Welcome to the Brain Games!");
+                Cli.askName();
+                break;
+            case "2":
+                Even.playParityNumberGame();
+                break;
+            case "3":
+                Calculation.playCalcGame();
+                break;
+            case "4":
+                GCD.playCommonDivisorGame();
+                break;
+            case "5":
+                Progression.playProgressionGame();
+                break;
+            case "6":
+                Prime.playPrimeNumberGame();
+                break;
+            default:
+                throw new RuntimeException("Unknown input: " + gameNumber);
         }
         scanner.close();
     }

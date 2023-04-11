@@ -22,22 +22,14 @@ public class Progression {
         for (var i = 0; i < questionsAndAnswers.length; i++) {
 
             int firstRandomNumber = Utils.generateNumber(MIN, MAX);
-            int step = (int) (Math.random() * MAXSTEP);
-            int hiddenIndex = (int) (Math.random() * MAXSTEP);
+            int step = Utils.generateNumber(MIN, MAXSTEP + MIN);
+            int hiddenIndex = Utils.generateNumber(MIN, MAXSTEP + MIN);
 
             String[] numbers = makeProgression(firstRandomNumber, step, LENGTH);
-
-            String[] hiddenNumbers = new String[LENGTH];
-            for (var j = 0; j < LENGTH; j++) {
-                if (j == hiddenIndex) {
-                    hiddenNumbers[j] = "..";
-                } else {
-                    hiddenNumbers[j] = numbers[j];
-                }
-            }
-
-            String question = String.join(" ", hiddenNumbers);
             String answer = numbers[hiddenIndex];
+
+            numbers[hiddenIndex] = "..";
+            String question = String.join(" ", numbers);
 
             questionsAndAnswers[i][0] = question;
             questionsAndAnswers[i][1] = answer;

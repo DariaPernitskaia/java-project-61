@@ -33,7 +33,7 @@ public class Calculation {
             int firstRandomNumber = Utils.generateNumber(MIN, MAX);
             int secondRandomNumber = Utils.generateNumber(MIN, MAX);
 
-            int randomChar = (int) (Math.random() * CHARS.length);
+            int randomChar = Utils.generateNumber(MIN, (CHARS.length + MIN));
             char operator = CHARS[randomChar];
             String question = firstRandomNumber + " " + operator + " " + secondRandomNumber;
             int answer = calculate(firstRandomNumber, secondRandomNumber, operator);
